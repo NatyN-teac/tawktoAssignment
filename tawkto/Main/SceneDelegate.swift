@@ -7,16 +7,46 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+    
+        //MARK: -Dependency Injection during intialization of scene.
+//        let viewController = UserListViewController()
+        guard let scene = (scene as? UIWindowScene) else { return }
+        
+        let storyboard = UIStoryboard(name: K.StoryboardID.Main, bundle: .main)
+        let navController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let usersListVC = navController.topViewController as! UserListViewController
+
+        let networkApi = NetworkApiService.shared
+        let networkMonitor = NetworkMonitorVM()
+        let dbHelper = DBHelper()
+        let dbServiceManager = DbService(helper: dbHelper)
+        let userListVM = UserListViewModel(serviceManager: networkApi,networkMonitor: networkMonitor,dbService: dbServiceManager)
+        usersListVC.userListViewModel = userListVM
+
+        window = UIWindow(windowScene: scene)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+//        var navigation = scene.windows.first?.rootViewController as? UINavigationController
+       
+        
+//        viewController.userListViewModel = userListVM
+//        navigation = UINavigationController(rootViewController: viewController)
+//        guard let VC = navigation?.topViewController as? UserListViewController  else {
+//            fatalError("unable to load VC")
+//        }
+      
+        
+//        VC.userListViewModel = userListVM
+        
+        
+       
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +77,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+//        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 

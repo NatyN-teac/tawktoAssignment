@@ -1,0 +1,6 @@
+framework module Pods_tawktoTests {
+  umbrella header "Pods-tawktoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

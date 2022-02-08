@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010DD1524F699D1E4567AA34957CA464 /* Pods-tawkto-tawktoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D916AD5355F2D9170D4FB56EC8951D9E /* Pods-tawkto-tawktoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		177AD6295EA35A25D5A51FCF7D3698B3 /* Pods-tawktoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDDC365B2B19E34B9C48EB390A50C6 /* Pods-tawktoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		190BDF4C4037280530BDC957358072A8 /* Pods-tawkto-tawktoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD0913415B615F5D7BEF9B466A0247 /* Pods-tawkto-tawktoUITests-dummy.m */; };
+		5B9714B6777B6DA160D87A5E01228AFC /* Pods-tawktoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7D763A9DEF3283B046939AA8BF200 /* Pods-tawktoTests-dummy.m */; };
+		697CDF38F66FC19176DF45D7095ADD13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		980F02C9AE20E6BD0CC5C6AD40D68464 /* Pods-tawkto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67EFEC0E1A6E9C81BF370BBA090F81C6 /* Pods-tawkto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A49A279B66B8FD0E76D7120F5EBED16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B406BD23BAC32DCF8511DCFE001ADC61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E993F1461EEC1EF4A6E1C0B312BB39BE /* Pods-tawkto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F65FBD86DC410B0B1FCE8818559C55C /* Pods-tawkto-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59064D010919C447B7154E3FE0AEB684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32AF7D8CC896CA1CD3CB5146C7DD9561;
+			remoteInfo = "Pods-tawkto";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05B355C03AE7007950BE35E4E94B677F /* Pods-tawkto-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tawkto-acknowledgements.markdown"; sourceTree = "<group>"; };
+		061B12E7C51DE24E41E1C53E6D9FD2D8 /* Pods-tawkto-tawktoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawkto-tawktoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A6A76853F6F7F4A1D761DC98B6155F9 /* Pods-tawkto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tawkto.modulemap"; sourceTree = "<group>"; };
+		1D2DFE61CFDACA27E61109850CB4E55D /* Pods_tawkto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_tawkto.framework; path = "Pods-tawkto.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAD0913415B615F5D7BEF9B466A0247 /* Pods-tawkto-tawktoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tawkto-tawktoUITests-dummy.m"; sourceTree = "<group>"; };
+		296F4520EE5CC2C881CE1313C6C6EED3 /* Pods-tawkto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawkto.release.xcconfig"; sourceTree = "<group>"; };
+		2AD565921263623285894C0A1B18AE0A /* Pods-tawktoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawktoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F65FBD86DC410B0B1FCE8818559C55C /* Pods-tawkto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tawkto-dummy.m"; sourceTree = "<group>"; };
+		3BA7D763A9DEF3283B046939AA8BF200 /* Pods-tawktoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-tawktoTests-dummy.m"; sourceTree = "<group>"; };
+		43D23E475257E902E3692738730E950D /* Pods_tawkto_tawktoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_tawkto_tawktoUITests.framework; path = "Pods-tawkto-tawktoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		478F86068862BC4C59BA66BBE12DC3A5 /* Pods_tawktoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_tawktoTests.framework; path = "Pods-tawktoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49FDA137153378E538AE0241274A2ED2 /* Pods-tawkto-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawkto-acknowledgements.plist"; sourceTree = "<group>"; };
+		569923AF0DB1DD1D2AE410000C6550C6 /* Pods-tawkto-tawktoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tawkto-tawktoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		579EEA1413C8F401F3A14800573D6936 /* Pods-tawkto-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawkto-Info.plist"; sourceTree = "<group>"; };
+		67EFEC0E1A6E9C81BF370BBA090F81C6 /* Pods-tawkto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tawkto-umbrella.h"; sourceTree = "<group>"; };
+		6F474750E8B4005FB52CE2C047D35562 /* Pods-tawktoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawktoTests-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7EAF6A88CF558AED21EF5E2A9091B51A /* Pods-tawktoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-tawktoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90DFB4E3869BC6C4E0F7C00DF5CBED91 /* Pods-tawkto-tawktoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawkto-tawktoUITests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B068B3CEB023620AA7C5DCBA34AD492A /* Pods-tawkto-tawktoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawkto-tawktoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B3DE8546F11917337AB35B5E637B8705 /* Pods-tawktoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tawktoTests.modulemap"; sourceTree = "<group>"; };
+		C75CC1C940E0A65903FF1789E18E3979 /* Pods-tawkto-tawktoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawkto-tawktoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C9BDDC365B2B19E34B9C48EB390A50C6 /* Pods-tawktoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tawktoTests-umbrella.h"; sourceTree = "<group>"; };
+		CC2C687A869ACBA33ACAC92F86A06A23 /* Pods-tawkto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawkto.debug.xcconfig"; sourceTree = "<group>"; };
+		D916AD5355F2D9170D4FB56EC8951D9E /* Pods-tawkto-tawktoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tawkto-tawktoUITests-umbrella.h"; sourceTree = "<group>"; };
+		E1C3633D516571CEC574C610CA3B678A /* Pods-tawktoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-tawktoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F3B4F81C3774F5C31AD82E78FAF9C3FC /* Pods-tawkto-tawktoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-tawkto-tawktoUITests.modulemap"; sourceTree = "<group>"; };
+		FC0B301417A2B5DFC0D87343ABD515EA /* Pods-tawktoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tawktoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63B23EE25FF0A629354D4F2173BD7FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697CDF38F66FC19176DF45D7095ADD13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD5577755E7114E040E6FF2BAF40AD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B406BD23BAC32DCF8511DCFE001ADC61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCCF11CE6B5FB048C4385D3242D514 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49A279B66B8FD0E76D7120F5EBED16E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C8C0AD2D7851ECB1BE1A1AC318BF34 /* Pods-tawkto-tawktoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3B4F81C3774F5C31AD82E78FAF9C3FC /* Pods-tawkto-tawktoUITests.modulemap */,
+				569923AF0DB1DD1D2AE410000C6550C6 /* Pods-tawkto-tawktoUITests-acknowledgements.markdown */,
+				B068B3CEB023620AA7C5DCBA34AD492A /* Pods-tawkto-tawktoUITests-acknowledgements.plist */,
+				1DAD0913415B615F5D7BEF9B466A0247 /* Pods-tawkto-tawktoUITests-dummy.m */,
+				90DFB4E3869BC6C4E0F7C00DF5CBED91 /* Pods-tawkto-tawktoUITests-Info.plist */,
+				D916AD5355F2D9170D4FB56EC8951D9E /* Pods-tawkto-tawktoUITests-umbrella.h */,
+				061B12E7C51DE24E41E1C53E6D9FD2D8 /* Pods-tawkto-tawktoUITests.debug.xcconfig */,
+				C75CC1C940E0A65903FF1789E18E3979 /* Pods-tawkto-tawktoUITests.release.xcconfig */,
+			);
+			name = "Pods-tawkto-tawktoUITests";
+			path = "Target Support Files/Pods-tawkto-tawktoUITests";
+			sourceTree = "<group>";
+		};
+		26EBCE124369D640A18524AA6CACABF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D2DFE61CFDACA27E61109850CB4E55D /* Pods_tawkto.framework */,
+				43D23E475257E902E3692738730E950D /* Pods_tawkto_tawktoUITests.framework */,
+				478F86068862BC4C59BA66BBE12DC3A5 /* Pods_tawktoTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		66D389AB4B15105CA4F47C56EC3EBCF6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7641C0344D09B0FB465BDD7D6BE8F882 /* Pods-tawkto */,
+				19C8C0AD2D7851ECB1BE1A1AC318BF34 /* Pods-tawkto-tawktoUITests */,
+				C27A18F72CE1BF2D884F8BC5DE9936D6 /* Pods-tawktoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7641C0344D09B0FB465BDD7D6BE8F882 /* Pods-tawkto */ = {
+			isa = PBXGroup;
+			children = (
+				1A6A76853F6F7F4A1D761DC98B6155F9 /* Pods-tawkto.modulemap */,
+				05B355C03AE7007950BE35E4E94B677F /* Pods-tawkto-acknowledgements.markdown */,
+				49FDA137153378E538AE0241274A2ED2 /* Pods-tawkto-acknowledgements.plist */,
+				2F65FBD86DC410B0B1FCE8818559C55C /* Pods-tawkto-dummy.m */,
+				579EEA1413C8F401F3A14800573D6936 /* Pods-tawkto-Info.plist */,
+				67EFEC0E1A6E9C81BF370BBA090F81C6 /* Pods-tawkto-umbrella.h */,
+				CC2C687A869ACBA33ACAC92F86A06A23 /* Pods-tawkto.debug.xcconfig */,
+				296F4520EE5CC2C881CE1313C6C6EED3 /* Pods-tawkto.release.xcconfig */,
+			);
+			name = "Pods-tawkto";
+			path = "Target Support Files/Pods-tawkto";
+			sourceTree = "<group>";
+		};
+		C27A18F72CE1BF2D884F8BC5DE9936D6 /* Pods-tawktoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3DE8546F11917337AB35B5E637B8705 /* Pods-tawktoTests.modulemap */,
+				7EAF6A88CF558AED21EF5E2A9091B51A /* Pods-tawktoTests-acknowledgements.markdown */,
+				E1C3633D516571CEC574C610CA3B678A /* Pods-tawktoTests-acknowledgements.plist */,
+				3BA7D763A9DEF3283B046939AA8BF200 /* Pods-tawktoTests-dummy.m */,
+				6F474750E8B4005FB52CE2C047D35562 /* Pods-tawktoTests-Info.plist */,
+				C9BDDC365B2B19E34B9C48EB390A50C6 /* Pods-tawktoTests-umbrella.h */,
+				FC0B301417A2B5DFC0D87343ABD515EA /* Pods-tawktoTests.debug.xcconfig */,
+				2AD565921263623285894C0A1B18AE0A /* Pods-tawktoTests.release.xcconfig */,
+			);
+			name = "Pods-tawktoTests";
+			path = "Target Support Files/Pods-tawktoTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				26EBCE124369D640A18524AA6CACABF3 /* Products */,
+				66D389AB4B15105CA4F47C56EC3EBCF6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5B08BC735966603FEC22EC3F56496FED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980F02C9AE20E6BD0CC5C6AD40D68464 /* Pods-tawkto-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F5A4FFEAEA72AD0F77E6409BBDEB98 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010DD1524F699D1E4567AA34957CA464 /* Pods-tawkto-tawktoUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DE8EF91678AE5E5837E5A6EB480B769 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177AD6295EA35A25D5A51FCF7D3698B3 /* Pods-tawktoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2D8353B6B262C3DE2144C31CB75DE2EE /* Pods-tawkto-tawktoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48B3D9C36169660EB039F28CA62AF92C /* Build configuration list for PBXNativeTarget "Pods-tawkto-tawktoUITests" */;
+			buildPhases = (
+				70F5A4FFEAEA72AD0F77E6409BBDEB98 /* Headers */,
+				76041AF539F83B835CCEBF2AACCA9AC6 /* Sources */,
+				9FD5577755E7114E040E6FF2BAF40AD7 /* Frameworks */,
+				9982A876DF01463AAAA4A34A74CA5184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-tawkto-tawktoUITests";
+			productName = "Pods-tawkto-tawktoUITests";
+			productReference = 43D23E475257E902E3692738730E950D /* Pods_tawkto_tawktoUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		32AF7D8CC896CA1CD3CB5146C7DD9561 /* Pods-tawkto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF608ADFFBC60C0DB165497DDA38323E /* Build configuration list for PBXNativeTarget "Pods-tawkto" */;
+			buildPhases = (
+				5B08BC735966603FEC22EC3F56496FED /* Headers */,
+				195C718EC821BF35EBCFCDC61DB4E57F /* Sources */,
+				ADCCCF11CE6B5FB048C4385D3242D514 /* Frameworks */,
+				4784CAFC30259249A59F5042A841103E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-tawkto";
+			productName = "Pods-tawkto";
+			productReference = 1D2DFE61CFDACA27E61109850CB4E55D /* Pods_tawkto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		918AAF4F119217F9EF9169D7E95627B2 /* Pods-tawktoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 339D5D58F08F3DC3200F527FFF01EEA5 /* Build configuration list for PBXNativeTarget "Pods-tawktoTests" */;
+			buildPhases = (
+				7DE8EF91678AE5E5837E5A6EB480B769 /* Headers */,
+				A05E49FEBBF03E6005B3A6878B4ED034 /* Sources */,
+				63B23EE25FF0A629354D4F2173BD7FEF /* Frameworks */,
+				32E0B8B86193A910AD89574D691478A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44119C43849DC005892D8E214CEA7860 /* PBXTargetDependency */,
+			);
+			name = "Pods-tawktoTests";
+			productName = "Pods-tawktoTests";
+			productReference = 478F86068862BC4C59BA66BBE12DC3A5 /* Pods_tawktoTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 26EBCE124369D640A18524AA6CACABF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32AF7D8CC896CA1CD3CB5146C7DD9561 /* Pods-tawkto */,
+				2D8353B6B262C3DE2144C31CB75DE2EE /* Pods-tawkto-tawktoUITests */,
+				918AAF4F119217F9EF9169D7E95627B2 /* Pods-tawktoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32E0B8B86193A910AD89574D691478A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4784CAFC30259249A59F5042A841103E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9982A876DF01463AAAA4A34A74CA5184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		195C718EC821BF35EBCFCDC61DB4E57F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E993F1461EEC1EF4A6E1C0B312BB39BE /* Pods-tawkto-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76041AF539F83B835CCEBF2AACCA9AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190BDF4C4037280530BDC957358072A8 /* Pods-tawkto-tawktoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05E49FEBBF03E6005B3A6878B4ED034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9714B6777B6DA160D87A5E01228AFC /* Pods-tawktoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44119C43849DC005892D8E214CEA7860 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-tawkto";
+			target = 32AF7D8CC896CA1CD3CB5146C7DD9561 /* Pods-tawkto */;
+			targetProxy = 59064D010919C447B7154E3FE0AEB684 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3A16D6D04F435972ECBD0C9C8EB395E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC2C687A869ACBA33ACAC92F86A06A23 /* Pods-tawkto.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawkto/Pods-tawkto-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawkto/Pods-tawkto.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F367722E32BC4B6A53BAB3552A96A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 296F4520EE5CC2C881CE1313C6C6EED3 /* Pods-tawkto.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawkto/Pods-tawkto-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawkto/Pods-tawkto.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		51165D9346379FFBD8887FB755922F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC0B301417A2B5DFC0D87343ABD515EA /* Pods-tawktoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawktoTests/Pods-tawktoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawktoTests/Pods-tawktoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9988BA6E62CC4C88F73FBFF3C618B8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AD565921263623285894C0A1B18AE0A /* Pods-tawktoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawktoTests/Pods-tawktoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawktoTests/Pods-tawktoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8C1C961B79A4BDD519BC965D12CD8D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75CC1C940E0A65903FF1789E18E3979 /* Pods-tawkto-tawktoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawkto-tawktoUITests/Pods-tawkto-tawktoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawkto-tawktoUITests/Pods-tawkto-tawktoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5ABACB9A36975E4F188E10FFC7A8C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061B12E7C51DE24E41E1C53E6D9FD2D8 /* Pods-tawkto-tawktoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-tawkto-tawktoUITests/Pods-tawkto-tawktoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-tawkto-tawktoUITests/Pods-tawkto-tawktoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		339D5D58F08F3DC3200F527FFF01EEA5 /* Build configuration list for PBXNativeTarget "Pods-tawktoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51165D9346379FFBD8887FB755922F17 /* Debug */,
+				9988BA6E62CC4C88F73FBFF3C618B8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48B3D9C36169660EB039F28CA62AF92C /* Build configuration list for PBXNativeTarget "Pods-tawkto-tawktoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5ABACB9A36975E4F188E10FFC7A8C12 /* Debug */,
+				D8C1C961B79A4BDD519BC965D12CD8D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF608ADFFBC60C0DB165497DDA38323E /* Build configuration list for PBXNativeTarget "Pods-tawkto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A16D6D04F435972ECBD0C9C8EB395E4 /* Debug */,
+				4F367722E32BC4B6A53BAB3552A96A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
