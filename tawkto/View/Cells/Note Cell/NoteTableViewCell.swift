@@ -8,14 +8,23 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var usernameLbl: UILabel!
     @IBOutlet var detailLbl: UILabel!
+    private var task: URLSessionDataTask?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         profileImageView.layer.cornerRadius = profileImageView.layer.bounds.height / 2
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task?.cancel()
+        task = nil
+        profileImageView.image = nil
     }
 }
 
@@ -24,7 +33,10 @@ extension NoteTableViewCell: TableViewCellProtocol {
         if let data = data as? NoteCellModel {
             self.usernameLbl.text = data.username
             self.detailLbl.text = data.detail
-            self.profileImageView.loadImageUsingCache(withUrl:data.imageURL)
+            if task == nil {
+                task = self.profileImageView.loadImageUsingCache(withUrl:data.imageURL)
+            }
+            
         }
     }
     

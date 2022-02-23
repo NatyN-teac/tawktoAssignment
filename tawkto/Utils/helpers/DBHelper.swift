@@ -13,6 +13,12 @@ class DBHelper {
     let container: NSPersistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
      let context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    lazy var backgroundContext: NSManagedObjectContext = {
+        let bgContext  = container.newBackgroundContext()
+        bgContext.automaticallyMergesChangesFromParent = true
+        return bgContext
+    }()
+    
   
     
     func add<T: NSManagedObject>(_ type: T.Type, context: NSManagedObjectContext) -> T? {

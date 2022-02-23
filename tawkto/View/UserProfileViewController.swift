@@ -26,7 +26,7 @@ class UserProfileViewController: UIViewController {
     func loadingView(isLoading: Bool) {
         indicatorView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         let indicator = UIActivityIndicatorView()
-        indicator.color = .orange
+        indicator.color = .systemOrange
         if #available(iOS 13.0, *) {
             indicator.style = .large
         } else {
@@ -34,7 +34,7 @@ class UserProfileViewController: UIViewController {
         }
         
         indicatorView!.tag = 1001
-        indicatorView!.backgroundColor = .white
+        indicatorView!.backgroundColor = .systemBackground
         indicatorView!.addSubview(indicator)
         indicator.startAnimating()
         indicator.center = indicatorView!.center
@@ -56,10 +56,10 @@ class UserProfileViewController: UIViewController {
     func errorView(isLoading:Bool){
         let holderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         holderView.tag = 1002
-        holderView.backgroundColor = .white
+        holderView.backgroundColor = .systemBackground
         let lbl = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         lbl.text = "No Saved profile data found!"
-        lbl.textColor = .red
+        lbl.textColor = .systemRed
         holderView.addSubview(lbl)
         lbl.center = holderView.center
         lbl.textAlignment = .center

@@ -42,13 +42,17 @@ class UserProfileViewModel {
     func saveNote(id: Int,note: String) {
         let result = self.dbServiceManager.fetchSingleUserById(id:id)
         if  result.id == id {
-            result.note = note
-            do{
-                try self.dbServiceManager.dbHelper.context.save()
-                self.successMessage.value = "Note Successfully Saved!"
-            }catch {
-                print("error: \(error)")
+            let context = self.dbServiceManager.dbHelper.backgroundContext
+            context.perform {
+                result.note = note
+                do{
+                    try self.dbServiceManager.dbHelper.context.save()
+                    self.successMessage.value = "Note Successfully Saved!"
+                }catch {
+                    print("error: \(error)")
+                }
             }
+             
         }
     }
     
@@ -89,21 +93,20 @@ class UserProfileViewModel {
                 }
                 
                 //MARK: -Save data in background to db
-                self.dbServiceManager.dbHelper.container.performBackgroundTask({ context in
-                    context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+                let ctx = self.dbServiceManager.dbHelper.backgroundContext
+                ctx.perform {
+                    ctx.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
                     result.follower = Int64(userProfile.follower)
                     result.following = Int64(userProfile.following)
                     result.blog = userProfile.blog
                     result.company = userProfile.company
                     result.name = userProfile.name
                     do{
-                        try context.save()
+                        try ctx.save()
                     }catch {
                         print("error: \(error)")
                     }
-                   
-                })
-                
+                }         
                 
             case .failure(let error):
                 self.isLoading.value = false

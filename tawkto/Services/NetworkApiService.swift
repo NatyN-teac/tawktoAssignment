@@ -58,7 +58,6 @@ class NetworkApiService {
         if let _ = isPagingEnabled{
             isPaginating = true
         }
-       
         if let url = URL(string: ApiAddress.getURL(since: since, pageSize: pageSize)) {
             urlSession.dataTask(with: url, completionHandler: { data, response, error in
                
@@ -94,7 +93,7 @@ class NetworkApiService {
     func fetchProfileDataFromServer(url: String,completion:@escaping (Result<UserDetailProfile,NetworkError>) -> Void){
         let urlAddress = URL(string: url)
         if let newUrl = urlAddress {
-            print("URL: \(newUrl)")
+            
             
             urlSession.dataTask(with: newUrl, completionHandler: { data, response, error in
                 if let error = error {
@@ -114,7 +113,6 @@ class NetworkApiService {
                 do {
                 
                     let userProfile = try JSONDecoder().decode(UserDetailProfile.self, from: data)
-                    print("NetworkApiService method : \(userProfile)")
                     completion(.success(userProfile))
                 }catch {
                     print("error in decoding: \(error.localizedDescription)")

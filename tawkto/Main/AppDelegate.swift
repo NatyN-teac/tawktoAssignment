@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       
-        //mark: - To run on ios 12 not for 13+
+//        mark: - To run on ios 12 not for 13+
 //        let storyboard = UIStoryboard(name: K.StoryboardID.Main, bundle: .main)
 //        let navController = storyboard.instantiateInitialViewController() as! UINavigationController
 //        let usersListVC = navController.topViewController as! UserListViewController

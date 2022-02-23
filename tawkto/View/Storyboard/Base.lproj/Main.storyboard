@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="81.696428571428569"/>
         </scene>
-        <!--Username-->
+        <!--User Profile View Controller-->
         <scene sceneID="EN2-FD-U8J">
             <objects>
                 <viewController id="zBM-DJ-lGz" customClass="UserProfileViewController" customModule="tawkto" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                             <constraint firstItem="q4X-SU-hjM" firstAttribute="top" secondItem="VF5-fl-aUd" secondAttribute="bottom" constant="8" id="zQa-AS-LBh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Username" id="bWe-H6-Nb9"/>
+                    <navigationItem key="navigationItem" id="bWe-H6-Nb9"/>
                     <connections>
                         <outlet property="blogLbl" destination="CJL-LJ-VJT" id="GK9-B3-UEW"/>
                         <outlet property="companyLbl" destination="n4z-vg-YrS" id="9SI-5S-x0D"/>

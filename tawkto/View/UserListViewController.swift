@@ -81,6 +81,7 @@ class UserListViewController: UIViewController, UISearchBarDelegate {
         setupTableView()
         navigationController?.navigationBar.isHidden = true
         searchBarUI()
+        self.userListTableView.restore()
         
         self.view.addSubview(activityIndicator)
         activityIndicator.center = self.view.center
@@ -97,48 +98,67 @@ class UserListViewController: UIViewController, UISearchBarDelegate {
         activityIndicator.startAnimating()
         userListViewModel.usersList.bind { [weak self] users in
             DispatchQueue.main.async {
-                self?.pageSize = users.count
-                self?.users.append(contentsOf: users)
+                self?.users = users
                 self?.userListTableView.reloadData()
                 
                 
             }
         }
-        userListViewModel.isPaginationLoading.bind { val in
+        userListViewModel.myPageSize.bind { [weak self] size in
+            self?.pageSize = size
+            
+        }
+        userListViewModel.isPaginationLoading.bind {[weak self] val in
             DispatchQueue.main.async {
-                self.isPagination = val
+                self?.isPagination = val
             }
         }
-        userListViewModel.lastSinceId.bind { id in
+        userListViewModel.lastSinceId.bind {[weak self] id in
             DispatchQueue.main.async {
-                self.lastId = id
+                self?.lastId = id
             }
             
         }
-        userListViewModel.isInPaginateMode.bind { inpagination in
+        userListViewModel.isInPaginateMode.bind { [weak self] inpagination in
             DispatchQueue.main.async {
-                self.inPaginationMode = inpagination
+                self?.inPaginationMode = inpagination
             }
         }
         
-        userListViewModel.searchResult.bind { result in
+        userListViewModel.searchResult.bind { [weak self] result in
             DispatchQueue.main.async {
-                self.isInSearchMode = self.searchBar.text != nil
-                if !result.isEmpty && self.isInSearchMode {
-                    self.users = result
-                    self.userListTableView.reloadData()
+                guard let self = self else {return}
+                self.isInSearchMode = self.searchBar.text?.count ?? 0 > 0
+                if self.isInSearchMode {
+                    if !result.isEmpty {
+                        self.userListTableView.restore()
+                        self.users = result
+                        self.userListTableView.reloadData()
+                    }else {
+                        self.users = []
+                        self.userListTableView.setEmptyMessage("Sorry, Result not  found \n Please try with another search key.")
+                        self.userListTableView.reloadData()
+                    }
+                }else {
+                    self.userListTableView.restore()
                 }
                 
             }
         }
         
-        userListViewModel.isConnected.bind { isConnected in
+        userListViewModel.isConnected.bind { [weak self] isConnected in
             DispatchQueue.main.async {
-                self.requestData(isConn: isConnected)
+                self?.requestData(isConn: isConnected)
             }
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          if !self.users.isEmpty {
+              self.requestData(isConn: self.isConnected)
+          }
+      }
     
     func requestData(isConn: Bool){
         self.isConnected = isConn
@@ -148,49 +168,53 @@ class UserListViewController: UIViewController, UISearchBarDelegate {
             self.removeViewFromSuperviewOfNoInternet()
             self.userListViewModel.apiServiceManager.isPaginating = false
             self.userListViewModel.retrieveData(since: 0, size: self.pageSize)
+            self.userListTableView.reloadData()
         }else {
             self.userListViewModel.getData(since: 0, size: self.pageSize)
             if self.userListViewModel.usersList.value.isEmpty {
                 self.activityIndicator.stopAnimating()
                 self.view.bringSubviewToFront(self.createNoInternetNoDataStateView())
+                self.userListTableView.reloadData()
             }else {
                 self.activityIndicator.stopAnimating()
                 self.removeViewFromSuperviewOfNoInternet()
                 self.view.bringSubviewToFront(self.createInternetIndicator())
-                self.userListTableView.reloadData()
+                
             }
             
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if !self.users.isEmpty {
-            self.requestData(isConn: self.isConnected)
-        }
-    }
-    
-    
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.users = []
         searchBar.text = ""
+        self.isInSearchMode = false
         searchBar.endEditing(true)
+        self.toggleCancelSearchCancelButton(searchBar: searchBar)
         self.userListViewModel.retrieveData(since: 0, size: pageSize)
         self.userListTableView.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
         self.userListViewModel.search(searchText: searchText)
         
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let term = searchBar.text {
-            self.userListViewModel.search(searchText: term)
-        }
-        searchBar.text = ""
+        searchBar.endEditing(true)
     }
-    
+
+    private func toggleCancelSearchCancelButton(searchBar: UISearchBar){
+        DispatchQueue.main.async {
+            let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton
+            if self.isInSearchMode {
+                cancelButton?.isEnabled = true
+            }else {
+                cancelButton?.isEnabled = false
+                
+            }
+        }
+    }
     
     private func createNoInternetNoDataStateView() -> UIView{
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height - 200))
@@ -273,6 +297,7 @@ class UserListViewController: UIViewController, UISearchBarDelegate {
             let storyboard = UIStoryboard(name: K.StoryboardID.Main, bundle: .main)
             let navController = storyboard.instantiateInitialViewController() as! UINavigationController
             navigationController?.navigationBar.isHidden = false
+            
             let userProfileVM = UserProfileViewModel(apiServiceManager: NetworkApiService(), url: selectedProfile.profileDetail,dbService: DbService(helper: DBHelper()),isConnected: self.isConnected,id: selectedProfile.id)
             destination.userProfileVM = userProfileVM
             navController.present(destination, animated: true, completion: nil)
@@ -290,6 +315,7 @@ extension UserListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard !users.isEmpty else {return UITableViewCell()}
         let cellModel = users[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellIdentifier) as? TableViewCellProtocol
       
         cell?.pupulateData(withData: cellModel)
@@ -316,23 +342,14 @@ extension UserListViewController: UITableViewDelegate {
 extension UserListViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
-        if (position > (userListTableView.contentSize.height - scrollView.frame.size.height)) && (isConnected) {
+        if (position > (userListTableView.contentSize.height - scrollView.frame.size.height)) && (isConnected) && isInSearchMode != true {
             userListViewModel.isInPaginateMode.value = true
             userListViewModel.retrieveData(since: lastId!, size: pageSize)
+            
         }
+        
     }
 }
-
-extension UserListViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        if let term = searchBar.text {
-            self.userListViewModel.search(searchText: term)
-        }
-    }
-    
-    
-}
-
 extension UITableView {
     func register(nibName: String) {
         register(nibName: nibName, withReuseCellIdentifier: nibName)
@@ -341,6 +358,28 @@ extension UITableView {
         let nib = UINib(nibName: nibName, bundle: .main)
         register(nib, forCellReuseIdentifier: withReuseCellIdentifier)
     }
+    
+    func setEmptyMessage(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width - 40, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont.systemFont(ofSize: 18)
+        messageLabel.sizeToFit()
+
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
+    
 }
+
+
+
 
 

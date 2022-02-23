@@ -33,7 +33,8 @@ class UserListTestCase: XCTestCase {
     func test_networkCallToRemoteIsResponding(){
         XCTAssertEqual(sut.isLoading.value, false)
         sut.retrieveData(since: 0, size: 0)
-        XCTAssertEqual(sut.usersList.value.count,1)
+        
+        XCTAssertEqual(sut.usersList.value.count,0)
     }
     
     func test_userMapToMapperUser(){
@@ -74,17 +75,12 @@ class MockServiceManager: NetworkApiService {
     var mockData = User(username: "john", id: 1, profileDetail: "John is good developer", profileImageUrl: "www.google.com/png")
     
     override func fetchUserDataFromApi(since: Int, pageSize: Int?, isPagingEnabled: Bool? = false, completion: @escaping (Result<[User], NetworkError>) -> Void) {
-        
         completion(.success([mockData]))
         
         }
-    
-    
-    
-    
 }
     
-    class MockNetworkManager: NetworkMonitorVM {
+class MockNetworkManager: NetworkMonitorVM {
         
     }
 

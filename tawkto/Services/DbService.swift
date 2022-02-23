@@ -59,11 +59,13 @@ class DbService {
     }
     
     func searchDataInDb(searchTerm: String) -> [UserInDb]{
+        let term = searchTerm.lowercased()
         let request = UserInDb.fetchRequest()
-        let usernameContainPredicate = NSPredicate(format: "username CONTAINS[c] %@ OR username == %@ OR note CONTAINS[c] %@ OR note == %@",searchTerm,searchTerm,searchTerm,searchTerm)
+        let usernameContainPredicate = NSPredicate(format: "username CONTAINS[c] %@ OR username == %@ OR note CONTAINS[c] %@ OR note == %@",term,term,term,term)
         request.predicate = usernameContainPredicate
         do {
             let result = try self.dbHelper.context.fetch(request)
+            print("Count result: \(result.count)")
             return result
         }catch {
             print(error.localizedDescription)

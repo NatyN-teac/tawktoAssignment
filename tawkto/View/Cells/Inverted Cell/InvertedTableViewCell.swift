@@ -13,11 +13,19 @@ class InvertedTableViewCell: UITableViewCell {
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var usernameLbl: UILabel!
     @IBOutlet var detailLbl: UILabel!
+    private var task: URLSessionDataTask?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         profileImage.layer.cornerRadius = profileImage.layer.bounds.height / 2
-    } 
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task?.cancel()
+        task = nil
+        profileImage.image = nil
+    }
+   
 }
 
 extension InvertedTableViewCell: TableViewCellProtocol {
@@ -25,10 +33,13 @@ extension InvertedTableViewCell: TableViewCellProtocol {
         if let data = data as? InvertedCellModel {
             self.usernameLbl.text = data.username
             self.detailLbl.text = data.detail
-            self.imageBgView.backgroundColor = .black
-            self.profileImage.loadImageUsingCache(withUrl:data.imageURL)
+            if task == nil {
+                task =  self.profileImage.loadImageUsingCache(withUrl:data.imageURL,isInverted: true)
+            }
         }
     }
     
     
 }
+
+

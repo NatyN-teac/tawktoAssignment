@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="NormalTableViewCell" customModule="tawkto" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NormalTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="NormalTableViewCell" customModule="tawkto" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="434" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -58,26 +58,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpT-D3-X4O">
-                        <rect key="frame" x="15" y="107.5" width="409" height="1.5"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1.5" id="wfk-iu-tuk"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="zfY-cK-4kQ" firstAttribute="top" secondItem="irl-uh-7Ln" secondAttribute="bottom" constant="8" id="0cl-2I-Ix0"/>
                     <constraint firstItem="9zz-fq-Dk5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3cU-90-PGK"/>
-                    <constraint firstItem="IpT-D3-X4O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="504-Xd-JUB"/>
                     <constraint firstAttribute="trailing" secondItem="irl-uh-7Ln" secondAttribute="trailing" constant="20" id="TYn-8B-wHh"/>
                     <constraint firstItem="9zz-fq-Dk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UJ1-PM-D3O"/>
-                    <constraint firstAttribute="trailing" secondItem="IpT-D3-X4O" secondAttribute="trailing" constant="10" id="WnZ-hp-7Bd"/>
                     <constraint firstAttribute="trailing" secondItem="zfY-cK-4kQ" secondAttribute="trailing" constant="20" id="c7R-hY-847"/>
                     <constraint firstItem="irl-uh-7Ln" firstAttribute="top" secondItem="9zz-fq-Dk5" secondAttribute="top" id="cs8-iz-kby"/>
                     <constraint firstItem="irl-uh-7Ln" firstAttribute="leading" secondItem="9zz-fq-Dk5" secondAttribute="trailing" constant="15" id="eKQ-b7-JjE"/>
                     <constraint firstItem="zfY-cK-4kQ" firstAttribute="leading" secondItem="9zz-fq-Dk5" secondAttribute="trailing" constant="15" id="fRl-ye-HKO"/>
-                    <constraint firstAttribute="bottom" secondItem="IpT-D3-X4O" secondAttribute="bottom" constant="1" id="uGc-k4-BAn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -96,9 +86,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
